@@ -1,4 +1,4 @@
-import { McpServer } from "@modelcontextprotocol/sdk/server/mcp.js";
+import { McpServer, ResourceTemplate } from "@modelcontextprotocol/sdk/server/mcp.js";
 import { StdioServerTransport } from "@modelcontextprotocol/sdk/server/stdio.js";
 import z from "zod";
 import fs from "node:fs/promises";
@@ -29,6 +29,15 @@ server.resource(
     };
   }
 );
+
+server.resource(
+    "user-details", new ResourceTemplate("users://{userId}/profile", {
+        list: undefined
+}), {
+    description: "Get a user's details from the database",
+    title: "User Details",
+    mimeType: "application/json",
+});
 
 server.tool(
   "create-user",
