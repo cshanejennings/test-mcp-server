@@ -1,0 +1,15 @@
+{
+  "servers": {
+    "test-mcp-server": {
+      "type": "stdio",
+      "command": "npm",
+      "args": ["run", "server:dev"],
+      "cwd": "${workspaceFolder}",
+      "dev": {
+        "watch": "build/**/*.ts",
+        "debug": { "type": "node" }
+      }
+    }
+  },
+  "inputs": []
+}

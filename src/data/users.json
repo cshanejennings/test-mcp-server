@@ -26,5 +26,12 @@
     "email": "mdog@youknowit.com",
     "address": "Yo mamma house",
     "phone": "555-555-5555"
+  },
+  {
+    "id": 5,
+    "name": "Random User",
+    "email": "randomuser123@example.com",
+    "address": "123 Random St, Faketown, USA",
+    "phone": "555-123-4567"
   }
 ]
